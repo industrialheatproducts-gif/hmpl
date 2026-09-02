@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HEATPORT MACHINES PVT. LTD. — Industrial Heating Solutions</title>
+<meta name="description" content="HEATPORT MACHINES PVT. LTD. — manufacturer of industrial heaters and heating elements based in Ahmedabad, Gujarat.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal: #17191B;
+    --panel: #202325;
+    --panel-2: #262a2d;
+    --line: #3a3f43;
+    --line-soft: #2c3033;
+    --paper: #EDEAE2;
+    --paper-dim: #a9a8a2;
+    --molten: #E8500A;
+    --molten-bright: #FF6B1F;
+    --amber: #F2A93B;
+    --steel: #7b8288;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--charcoal);
+    color:var(--paper);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Oswald', sans-serif;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:1.08;
+  }
+
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  a{color:inherit; text-decoration:none;}
+
+  img,svg{display:block; max-width:100%;}
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  ::selection{background:var(--molten); color:var(--charcoal);}
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--molten-bright);
+    outline-offset:3px;
+  }
+
+  /* ===== Blueprint grid backdrop ===== */
+  .blueprint{
+    background-image:
+      linear-gradient(var(--line-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size:40px 40px;
+  }
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(23,25,27,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+
+  .nav-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:76px;
+  }
+
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+
+  .brand-mark{width:38px; height:38px; flex-shrink:0;}
+
+  .brand-text{
+    font-family:'Oswald', sans-serif;
+    font-weight:600;
+    font-size:1.05rem;
+    letter-spacing:0.02em;
+    line-height:1.15;
+  }
+  .brand-text span{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:400;
+    font-size:0.62rem;
+    letter-spacing:0.14em;
+    color:var(--amber);
+    margin-top:2px;
+  }
+
+  nav.links{
+    display:flex;
+    align-items:center;
+    gap:36px;
+  }
+  nav.links a{
+    font-size:0.85rem;
+    letter-spacing:0.03em;
+    color:var(--paper-dim);
+    transition:color .15s ease;
+    position:relative;
+  }
+  nav.links a:hover{color:var(--paper);}
+
+  .call-strip{
+    display:flex;
+    align-items:center;
+    gap:18px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:11px 20px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.04em;
+    border:1px solid var(--molten);
+    color:var(--paper);
+    background:transparent;
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{background:var(--molten); color:var(--charcoal);}
+  .btn.solid{background:var(--molten); color:var(--charcoal);}
+  .btn.solid:hover{background:var(--molten-bright); border-color:var(--molten-bright);}
+
+  .phone-mini{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+    color:var(--paper-dim);
+  }
+  .phone-mini svg{width:15px; height:15px; stroke:var(--amber);}
+
+  .menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:var(--paper);
+    cursor:pointer;
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    padding:96px 0 80px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:56px;
+    align-items:center;
+  }
+
+  .eyebrow-plate{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.12em;
+    color:var(--amber);
+    border:1px solid var(--line);
+    padding:6px 12px;
+    margin-bottom:26px;
+  }
+  .eyebrow-plate .dot{width:6px; height:6px; background:var(--molten); border-radius:50%;}
+
+  .hero h1{
+    font-size:clamp(2.4rem, 5vw, 3.9rem);
+    max-width:12ch;
+    margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--molten-bright);
+  }
+
+  .hero p.lead{
+    font-size:1.08rem;
+    color:var(--paper-dim);
+    max-width:46ch;
+    margin-bottom:36px;
+  }
+
+  .hero-ctas{
+    display:flex;
+    gap:16px;
+    margin-bottom:44px;
+    flex-wrap:wrap;
+  }
+
+  .spec-row{
+    display:flex;
+    gap:0;
+    border-top:1px solid var(--line);
+  }
+  .spec-item{
+    flex:1;
+    padding:16px 20px 0 0;
+    border-right:1px solid var(--line);
+  }
+  .spec-item:last-child{border-right:none; padding-right:0;}
+  .spec-item .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1.5rem;
+    color:var(--paper);
+  }
+  .spec-item .lbl{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.06em;
+    color:var(--steel);
+    margin-top:4px;
+  }
+
+  /* Hero illustration */
+  .hero-art{
+    position:relative;
+    aspect-ratio:1/1.02;
+    border:1px solid var(--line);
+    background:var(--panel);
+  }
+  .hero-art .tag{
+    position:absolute;
+    top:14px; left:14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.66rem;
+    letter-spacing:0.08em;
+    color:var(--steel);
+    z-index:2;
+  }
+  .hero-art .tag.br{left:auto; right:14px; top:auto; bottom:14px; text-align:right;}
+  .hero-art svg{width:100%; height:100%;}
+
+  /* ===== Section shell ===== */
+  section{padding:88px 0;}
+  section.tight{padding:64px 0;}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:24px;
+    margin-bottom:52px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:22px;
+  }
+  .section-head .idx{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--amber);
+    letter-spacing:0.1em;
+    margin-bottom:10px;
+    display:block;
+  }
+  .section-head h2{
+    font-size:clamp(1.7rem, 3vw, 2.3rem);
+  }
+  .section-head p{
+    color:var(--paper-dim);
+    max-width:36ch;
+    font-size:0.92rem;
+    padding-bottom:4px;
+  }
+
+  /* ===== About ===== */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:64px;
+  }
+  .about-copy p{
+    color:var(--paper-dim);
+    font-size:1rem;
+    max-width:52ch;
+    margin-bottom:18px;
+  }
+  .about-copy p:first-child{
+    color:var(--paper);
+    font-size:1.12rem;
+  }
+
+  .plate{
+    border:1px solid var(--line);
+    background:var(--panel);
+  }
+  .plate-row{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 22px;
+    border-bottom:1px solid var(--line);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.85rem;
+  }
+  .plate-row:last-child{border-bottom:none;}
+  .plate-row .k{color:var(--steel); letter-spacing:0.04em;}
+  .plate-row .v{color:var(--paper); text-align:right;}
+
+  /* ===== Products ===== */
+  .prod-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .prod-card{
+    background:var(--panel);
+    padding:32px 28px;
+    transition:background .15s ease;
+  }
+  .prod-card:hover{background:var(--panel-2);}
+  .prod-card .pn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--amber);
+    letter-spacing:0.08em;
+    margin-bottom:18px;
+    display:block;
+  }
+  .prod-card .icon{
+    width:40px; height:40px;
+    margin-bottom:20px;
+    stroke:var(--molten-bright);
+    fill:none;
+    stroke-width:1.4;
+  }
+  .prod-card h3{
+    font-size:1.08rem;
+    margin-bottom:10px;
+    letter-spacing:0.005em;
+  }
+  .prod-card p{
+    font-size:0.88rem;
+    color:var(--paper-dim);
+  }
+
+  /* ===== Why us strip ===== */
+  .why-strip{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    border:1px solid var(--line);
+  }
+  .why-item{
+    padding:34px 26px;
+    border-right:1px solid var(--line);
+  }
+  .why-item:last-child{border-right:none;}
+  .why-item .n{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--molten-bright);
+    font-size:0.85rem;
+    margin-bottom:14px;
+    display:block;
+  }
+  .why-item h3{
+    font-size:1rem;
+    margin-bottom:10px;
+  }
+  .why-item p{
+    font-size:0.86rem;
+    color:var(--paper-dim);
+  }
+
+  /* ===== Industries chips ===== */
+  .chip-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .chip{
+    border:1px solid var(--line);
+    padding:9px 16px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--paper-dim);
+  }
+
+  /* ===== Contact ===== */
+  .contact-section{
+    background:var(--panel);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:0;
+    border:1px solid var(--line);
+  }
+  .contact-info{
+    padding:44px;
+    border-right:1px solid var(--line);
+  }
+  .contact-info h3{
+    font-size:1.3rem;
+    margin-bottom:28px;
+  }
+  .info-line{
+    display:flex;
+    gap:16px;
+    padding:18px 0;
+    border-top:1px solid var(--line);
+  }
+  .info-line:first-of-type{border-top:none;}
+  .info-line svg{
+    width:20px; height:20px;
+    stroke:var(--amber);
+    fill:none;
+    stroke-width:1.5;
+    flex-shrink:0;
+    margin-top:2px;
+  }
+  .info-line .lbl{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.66rem;
+    letter-spacing:0.08em;
+    color:var(--steel);
+    margin-bottom:4px;
+  }
+  .info-line .val{
+    font-size:0.95rem;
+    color:var(--paper);
+  }
+  .info-line a.val:hover{color:var(--molten-bright);}
+
+  .hours-badge{
+    margin-top:28px;
+    border:1px solid var(--molten);
+    padding:16px 18px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .hours-badge .pulse{
+    width:9px; height:9px;
+    border-radius:50%;
+    background:var(--molten-bright);
+    flex-shrink:0;
+    box-shadow:0 0 0 0 rgba(255,107,31,0.6);
+    animation:pulse 2s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(255,107,31,0.45);}
+    70%{box-shadow:0 0 0 8px rgba(255,107,31,0);}
+    100%{box-shadow:0 0 0 0 rgba(255,107,31,0);}
+  }
+  .hours-badge .val{font-family:'IBM Plex Mono', monospace; font-size:0.82rem;}
+
+  form.enquiry{
+    padding:44px;
+  }
+  .field{
+    margin-bottom:20px;
+  }
+  .field label{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.08em;
+    color:var(--steel);
+    margin-bottom:8px;
+  }
+  .field input, .field textarea{
+    width:100%;
+    background:var(--charcoal);
+    border:1px solid var(--line);
+    padding:13px 14px;
+    color:var(--paper);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:0.92rem;
+  }
+  .field input:focus, .field textarea:focus{
+    outline:none;
+    border-color:var(--molten);
+  }
+  .field-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  .form-note{
+    font-size:0.78rem;
+    color:var(--steel);
+    margin-top:4px;
+  }
+  #formStatus{
+    margin-top:16px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+    color:var(--amber);
+    display:none;
+  }
+
+  /* ===== Map link block ===== */
+  .map-block{
+    margin-top:0;
+    border-top:1px solid var(--line);
+  }
+  .map-block a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 44px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+    color:var(--paper-dim);
+    transition:color .15s ease;
+  }
+  .map-block a:hover{color:var(--paper);}
+
+  /* ===== Footer ===== */
+  footer{
+    padding:40px 0;
+  }
+  .foot-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  .foot-brand{
+    font-family:'Oswald', sans-serif;
+    font-size:0.92rem;
+    letter-spacing:0.03em;
+  }
+  .foot-links{
+    display:flex;
+    gap:26px;
+  }
+  .foot-links a{
+    font-size:0.8rem;
+    color:var(--paper-dim);
+  }
+  .foot-links a:hover{color:var(--paper);}
+  .foot-meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--steel);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr; gap:44px;}
+    .hero-art{max-width:420px;}
+    .about-grid{grid-template-columns:1fr; gap:40px;}
+    .prod-grid{grid-template-columns:repeat(2, 1fr);}
+    .why-strip{grid-template-columns:repeat(2, 1fr);}
+    .why-item{border-bottom:1px solid var(--line);}
+    .contact-grid{grid-template-columns:1fr;}
+    .contact-info{border-right:none; border-bottom:1px solid var(--line);}
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+  }
+  @media (max-width:600px){
+    .wrap{padding:0 20px;}
+    .spec-row{flex-wrap:wrap; row-gap:16px;}
+    .spec-item{flex:1 1 45%; border-right:none;}
+    .prod-grid{grid-template-columns:1fr;}
+    .why-strip{grid-template-columns:1fr;}
+    .field-row{grid-template-columns:1fr;}
+    .contact-info, form.enquiry{padding:30px 24px;}
+    .map-block a{padding:18px 24px; flex-direction:column; align-items:flex-start; gap:6px;}
+    .call-strip .phone-mini{display:none;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-row">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="38" height="38" stroke="#7b8288" stroke-width="1"/>
+        <path d="M12 28C12 28 12 24 15 24C18 24 18 28 18 28C18 28 18 24 21 24C24 24 24 28 24 28C24 28 24 24 27 24C30 24 30 28 30 28" stroke="#F2A93B" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M20 8L20 20" stroke="#E8500A" stroke-width="1.6" stroke-linecap="round"/>
+        <path d="M15 12L20 8L25 12" stroke="#E8500A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-text">HEATPORT MACHINES<span>PVT. LTD. — AHMEDABAD</span></span>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="call-strip">
+      <span class="phone-mini">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.8C8 13.6 10.4 16 13.2 17.4L15.4 15.2C15.7 14.9 16.1 14.8 16.5 15C17.7 15.4 19 15.6 20.3 15.6C20.9 15.6 21.3 16 21.3 16.6V20C21.3 20.6 20.9 21 20.3 21C10.6 21 3 13.4 3 3.7C3 3.1 3.4 2.7 4 2.7H7.4C8 2.7 8.4 3.1 8.4 3.7C8.4 5 8.6 6.3 9 7.5C9.2 7.9 9.1 8.3 8.8 8.6L6.6 10.8Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        9427030330
+      </span>
+      <a class="btn solid" href="tel:+919427030330">Call Now</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero blueprint">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow-plate"><span class="dot"></span>Industrial Heating Manufacturer</div>
+          <h1>Heat, engineered<br>to <em>hold its line.</em></h1>
+          <p class="lead">HEATPORT MACHINES PVT. LTD. designs and builds industrial heaters and heating elements for plants that can't afford a temperature to drift — from Ahmedabad, for shop floors everywhere.</p>
+          <div class="hero-ctas">
+            <a class="btn solid" href="#contact">Request a Quote</a>
+            <a class="btn" href="#products">See Products</a>
+          </div>
+          <div class="spec-row mono">
+            <div class="spec-item">
+              <div class="num">9AM–7PM</div>
+              <div class="lbl">OPEN ALL DAYS</div>
+            </div>
+            <div class="spec-item">
+              <div class="num">AHMD</div>
+              <div class="lbl">SARASPUR, GUJARAT</div>
+            </div>
+            <div class="spec-item">
+              <div class="num">B2B</div>
+              <div class="lbl">CUSTOM &amp; SERIES BUILDS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <span class="tag mono">FIG. 01 — HEATING COIL, CROSS-SECTION</span>
+          <span class="tag br mono">RATED 240–415V · CUSTOM WATTAGE</span>
+          <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FF6B1F" stop-opacity="0.55"/>
+                <stop offset="100%" stop-color="#FF6B1F" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <circle cx="200" cy="200" r="150" fill="url(#glow)"/>
+            <g stroke="#3a3f43" stroke-width="1">
+              <line x1="40" y1="80" x2="360" y2="80"/>
+              <line x1="40" y1="340" x2="360" y2="340"/>
+              <line x1="80" y1="40" x2="80" y2="380"/>
+              <line x1="320" y1="40" x2="320" y2="380"/>
+            </g>
+            <path d="M120 320 Q120 220 200 220 Q280 220 280 120" fill="none" stroke="#E8500A" stroke-width="3" stroke-linecap="round"/>
+            <g fill="none" stroke="#F2A93B" stroke-width="4" stroke-linecap="round">
+              <path d="M140 300 Q160 260 140 220 Q120 180 140 140 Q160 100 140 110"/>
+              <path d="M170 305 Q190 265 170 225 Q150 185 170 145 Q190 105 170 115"/>
+              <path d="M200 305 Q220 265 200 225 Q180 185 200 145 Q220 105 200 115"/>
+              <path d="M230 300 Q250 260 230 220 Q210 180 230 140 Q250 100 230 110"/>
+            </g>
+            <circle cx="140" cy="110" r="5" fill="#F2A93B"/>
+            <circle cx="230" cy="110" r="5" fill="#F2A93B"/>
+            <rect x="60" y="360" width="60" height="14" fill="none" stroke="#6b7278" stroke-width="1"/>
+            <text x="90" y="370" fill="#7b8288" font-family="IBM Plex Mono" font-size="8" text-anchor="middle">L1</text>
+            <rect x="280" y="360" width="60" height="14" fill="none" stroke="#6b7278" stroke-width="1"/>
+            <text x="310" y="370" fill="#7b8288" font-family="IBM Plex Mono" font-size="8" text-anchor="middle">L2</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <span class="section-head .idx"></span>
+        <p>HEATPORT MACHINES PVT. LTD. builds the heating equipment that other machines rely on — heaters that hold a set temperature through long production runs, harsh environments, and repeated on/off cycles.</p>
+        <p>We work directly with plant engineers and procurement teams to size, build, and supply heaters to spec rather than off a catalogue page. Every unit that leaves our Saraspur facility is built to run first and look good second.</p>
+        <p>If you already know what you need, send us the drawing. If you're starting from a process problem, describe it — we'll work back to the right heater.</p>
+      </div>
+      <div class="plate mono">
+        <div class="plate-row"><span class="k">COMPANY</span><span class="v">HEATPORT MACHINES PVT. LTD.</span></div>
+        <div class="plate-row"><span class="k">LOCATION</span><span class="v">Saraspur, Ahmedabad</span></div>
+        <div class="plate-row"><span class="k">STATE</span><span class="v">Gujarat, India</span></div>
+        <div class="plate-row"><span class="k">SEGMENT</span><span class="v">Industrial Heating Equipment</span></div>
+        <div class="plate-row"><span class="k">SUPPLY MODE</span><span class="v">Standard &amp; Custom-Built</span></div>
+        <div class="plate-row"><span class="k">HOURS</span><span class="v">9:00 AM – 7:00 PM, All Days</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="idx mono">02 / RANGE</span>
+          <h2>What we build</h2>
+        </div>
+        <p>Standard configurations below — most units are adapted to your voltage, wattage, and mounting before they ship.</p>
+      </div>
+
+      <div class="prod-grid">
+        <div class="prod-card">
+          <span class="pn mono">HP-STR</span>
+          <svg class="icon" viewBox="0 0 40 40"><rect x="6" y="16" width="28" height="8"/><path d="M10 16V12M18 16V12M26 16V12M30 16V12" stroke-linecap="round"/></svg>
+          <h3>Strip Heaters</h3>
+          <p>Flat, high-density heating for mould walls, platens, and flat surfaces requiring even heat distribution.</p>
+        </div>
+        <div class="prod-card">
+          <span class="pn mono">HP-TUB</span>
+          <svg class="icon" viewBox="0 0 40 40"><path d="M8 30 L20 8 L32 30 Z" stroke-linejoin="round"/><path d="M14 24 H26" stroke-linecap="round"/></svg>
+          <h3>Tubular Heaters</h3>
+          <p>Bent to shape for tanks, ovens, and air-heating applications where element geometry matters.</p>
+        </div>
+        <div class="prod-card">
+          <span class="pn mono">HP-CRT</span>
+          <svg class="icon" viewBox="0 0 40 40"><rect x="14" y="6" width="12" height="28" rx="2"/><line x1="20" y1="34" x2="20" y2="38"/></svg>
+          <h3>Cartridge Heaters</h3>
+          <p>Compact, high-watt-density inserts for die, mould, and hot-runner heating in tight bore sizes.</p>
+        </div>
+        <div class="prod-card">
+          <span class="pn mono">HP-BND</span>
+          <svg class="icon" viewBox="0 0 40 40"><circle cx="20" cy="20" r="13"/><circle cx="20" cy="20" r="6"/></svg>
+          <h3>Band &amp; Nozzle Heaters</h3>
+          <p>Clamp-on heating for barrels and nozzles on extrusion and injection-moulding lines.</p>
+        </div>
+        <div class="prod-card">
+          <span class="pn mono">HP-IMM</span>
+          <svg class="icon" viewBox="0 0 40 40"><path d="M12 8 V26 A8 8 0 0 0 28 26 V8" stroke-linecap="round"/><line x1="8" y1="8" x2="32" y2="8" stroke-linecap="round"/></svg>
+          <h3>Immersion Heaters</h3>
+          <p>Direct-liquid heating elements for tanks, baths, and process fluids, built to your flange spec.</p>
+        </div>
+        <div class="prod-card">
+          <span class="pn mono">HP-PNL</span>
+          <svg class="icon" viewBox="0 0 40 40"><rect x="7" y="7" width="26" height="26" rx="1"/><line x1="13" y1="15" x2="27" y2="15"/><line x1="13" y1="21" x2="23" y2="21"/><circle cx="27" cy="27" r="2"/></svg>
+          <h3>Control Panels</h3>
+          <p>Thermostats, controllers, and switchgear built alongside the heater, sized to the load.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why" class="tight">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="idx mono">03 / STANDARD</span>
+          <h2>Why plants order from us</h2>
+        </div>
+      </div>
+      <div class="why-strip">
+        <div class="why-item">
+          <span class="n mono">01</span>
+          <h3>Built to Print</h3>
+          <p>We take your drawing or your problem — either way, the heater is sized to the actual job.</p>
+        </div>
+        <div class="why-item">
+          <span class="n mono">02</span>
+          <h3>Quality Checked</h3>
+          <p>Every unit is tested before it leaves the facility, not spot-checked after complaints.</p>
+        </div>
+        <div class="why-item">
+          <span class="n mono">03</span>
+          <h3>Direct Support</h3>
+          <p>You speak to the people who built it — no call centre, no ticket queue.</p>
+        </div>
+        <div class="why-item">
+          <span class="n mono">04</span>
+          <h3>Open All Days</h3>
+          <p>9 AM to 7 PM, every day of the week, for line-down calls that can't wait for Monday.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="tight">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="idx mono">04 / IN USE</span>
+          <h2>Where our heaters run</h2>
+        </div>
+      </div>
+      <div class="chip-row">
+        <span class="chip">Plastic Processing</span>
+        <span class="chip">Packaging Machinery</span>
+        <span class="chip">Textile &amp; Dyeing</span>
+        <span class="chip">Pharmaceutical Equipment</span>
+        <span class="chip">Food Processing</span>
+        <span class="chip">Chemical Plants</span>
+        <span class="chip">Rubber &amp; Moulding</span>
+        <span class="chip">General Industrial OEM</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="wrap" style="padding-top:88px; padding-bottom:0;">
+      <div class="section-head" style="border-bottom:none;">
+        <div>
+          <span class="idx mono">05 / CONTACT</span>
+          <h2>Get in touch</h2>
+        </div>
+        <p>Call during working hours for the fastest response, or send your requirement below.</p>
+      </div>
+    </div>
+
+    <div class="wrap" style="padding-bottom:88px;">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>HEATPORT MACHINES PVT. LTD.</h3>
+
+          <div class="info-line">
+            <svg viewBox="0 0 24 24"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.4 15.6 2 12 2C8.4 2 5 5.4 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.7"/></svg>
+            <div>
+              <div class="lbl mono">ADDRESS</div>
+              <a class="val" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=30%2C+Manorath+Estate%2C+Near+Old+Milan+Cinema%2C+Saraspur%2C+Ahmedabad+380018">30, Manorath Estate, Near Old Milan Cinema, Saraspur, Ahmedabad – 380018</a>
+            </div>
+          </div>
+
+          <div class="info-line">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8C8 13.6 10.4 16 13.2 17.4L15.4 15.2C15.7 14.9 16.1 14.8 16.5 15C17.7 15.4 19 15.6 20.3 15.6C20.9 15.6 21.3 16 21.3 16.6V20C21.3 20.6 20.9 21 20.3 21C10.6 21 3 13.4 3 3.7C3 3.1 3.4 2.7 4 2.7H7.4C8 2.7 8.4 3.1 8.4 3.7C8.4 5 8.6 6.3 9 7.5C9.2 7.9 9.1 8.3 8.8 8.6L6.6 10.8Z"/></svg>
+            <div>
+              <div class="lbl mono">PHONE</div>
+              <a class="val" href="tel:+919427030330">+91 94270 30330</a>
+            </div>
+          </div>
+
+          <div class="info-line">
+            <svg viewBox="0 0 24 24"><path d="M3 6H21V18H3V6Z"/><path d="M3 6L12 13L21 6"/></svg>
+            <div>
+              <div class="lbl mono">EMAIL</div>
+              <a class="val" href="mailto:teamhmpl@gmail.com">teamhmpl@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="hours-badge">
+            <span class="pulse"></span>
+            <div>
+              <div class="lbl mono" style="color:var(--amber);">OPEN NOW — ALL DAYS</div>
+              <div class="val">9:00 AM – 7:00 PM</div>
+            </div>
+          </div>
+        </div>
+
+        <form class="enquiry" id="enquiryForm">
+          <div class="field-row">
+            <div class="field">
+              <label for="fname">NAME</label>
+              <input type="text" id="fname" name="name" required placeholder="Your full name">
+            </div>
+            <div class="field">
+              <label for="fphone">PHONE</label>
+              <input type="tel" id="fphone" name="phone" required placeholder="10-digit mobile number">
+            </div>
+          </div>
+          <div class="field">
+            <label for="fcompany">COMPANY</label>
+            <input type="text" id="fcompany" name="company" placeholder="Company / plant name">
+          </div>
+          <div class="field">
+            <label for="fmsg">REQUIREMENT</label>
+            <textarea id="fmsg" name="message" rows="4" required placeholder="Heater type, wattage, voltage, quantity, drawing details..."></textarea>
+          </div>
+          <button type="submit" class="btn solid">Send Enquiry</button>
+          <p class="form-note">This form opens your email client addressed to teamhmpl@gmail.com — nothing is sent from this page directly.</p>
+          <div id="formStatus"></div>
+        </form>
+      </div>
+
+      <div class="map-block">
+        <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=30%2C+Manorath+Estate%2C+Near+Old+Milan+Cinema%2C+Saraspur%2C+Ahmedabad+380018">
+          <span>View 30, Manorath Estate, Saraspur, Ahmedabad on Google Maps</span>
+          <span>↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-row">
+    <span class="foot-brand">HEATPORT MACHINES PVT. LTD.</span>
+    <div class="foot-links">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <span class="foot-meta mono">© <span id="year"></span> HEATPORT MACHINES PVT. LTD. — SARASPUR, AHMEDABAD</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const form = document.getElementById('enquiryForm');
+  const status = document.getElementById('formStatus');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    const company = document.getElementById('fcompany').value.trim();
+    const msg = document.getElementById('fmsg').value.trim();
+
+    const subject = encodeURIComponent('Enquiry from ' + name + (company ? ' (' + company + ')' : ''));
+    const body = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'Phone: ' + phone + '\n' +
+      'Company: ' + (company || '-') + '\n\n' +
+      'Requirement:\n' + msg
+    );
+    window.location.href = 'mailto:teamhmpl@gmail.com?subject=' + subject + '&body=' + body;
+
+    status.style.display = 'block';
+    status.textContent = 'Opening your email app to send this enquiry to teamhmpl@gmail.com...';
+  });
+</script>
+
+</body>
+</html>
